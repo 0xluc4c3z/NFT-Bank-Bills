@@ -1,0 +1,70 @@
+.App {
+  height: 100vh;
+  width: 100%;
+  background-color: #212121;
+  color: aliceblue;
+}
+
+.connect{
+  margin-top: 100px;
+}
+
+.box{
+  width: 800px;
+  height: 500px;
+  border-radius: 23px;
+  background: #212121;
+  box-shadow: inset 7px 7px 14px #131313,
+            inset -7px -7px 14px #2f2f2f;
+}
+
+
+button{
+  margin-left: 50px;
+  margin-right: 50px;
+  /* From uiverse.io by @levxyca */
+  font-family: monospace;
+  font-size: 15px;
+  color: #FAFAFA;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: 2px solid #FAFAFA;
+  background: #252525;
+  box-shadow: 3px 3px #fafafa;
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: none;
+  transform: translate(3px, 3px);
+}
+
+
+
+
+/* From uiverse.io by @alexruix */
+/* From uiverse.io by @Jaareet */
+.input {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  text-align: center;
+  font-weight: 500;
+  font-size: .8vw;
+  color: #fff;
+  background-color: rgb(28,28,30);
+  box-shadow: 0 0 .4vw rgba(0,0,0,0.5), 0 0 0 .15vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  padding: 0.4vw;
+  width: 80px;
+  transition: .4s;
+}
+
+.input:hover {
+  box-shadow: 0 0 0 .15vw rgba(135, 207, 235, 0.186);
+}
+
+.input:focus {
+  box-shadow: 0 0 0 .15vw skyblue;
+}
