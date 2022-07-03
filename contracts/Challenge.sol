@@ -44,6 +44,11 @@ contract Challenge is ERC1155, Ownable, ReentrancyGuard {
     Stock.peso100 = peso100;
   }
 
+  /// @notice Funcion que actualiza devuelve 
+  function BalanceStock() public view returns(Cash memory){
+    return Stock;
+  }
+
   /* --------------------------------- View function -------------------------------- */
   /// @notice Se utiliza la intancia "stock" para consultar el limite actual
   /// @notice Se crea la intancia "amount" que devuelve la cantidad de billetes necesarios 
