@@ -1,3 +1,4 @@
+
 .box-div{
   display: flex;
   justify-content: center;
@@ -20,4 +21,13 @@
 .input-2{
   margin-top: 30px;
   width: 400px;
+}
+
+.box-stock{
+  display: flex;
+  justify-content: center;
+}
+
+.pesos{
+  margin: 25px;
 }

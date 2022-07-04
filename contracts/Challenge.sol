@@ -182,10 +182,10 @@ contract Challenge is ERC1155, Ownable, ReentrancyGuard {
     }
 
     Stock.peso1 -= amount.peso1;
-    Stock.peso5 = amount.peso5;
-    Stock.peso10 = amount.peso10;
-    Stock.peso20 = amount.peso20;
-    Stock.peso50 = amount.peso50;
-    Stock.peso100 = amount.peso100;
+    Stock.peso5 -= amount.peso5;
+    Stock.peso10 -= amount.peso10;
+    Stock.peso20 -= amount.peso20;
+    Stock.peso50 -= amount.peso50;
+    Stock.peso100 -= amount.peso100;
   }
 }
