@@ -1,3 +1,5 @@
+v### `npm install` to install dependencies 
+
 # My approach to the Smart Contract Developer Challenge
 
 The project is divided into two sections: `Smart Contracts` & `Frontend`.
