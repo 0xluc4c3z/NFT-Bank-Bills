@@ -4,7 +4,7 @@ import { ethers } from "ethers";
 import ChallengeABI from '../web3/ChallengeABI.json'
 import { Admin } from './Admin';
 
-const ChallengeAddress = "0xE361E3565E5f73f9b51966bE586742ae51a0c6D8"
+const ChallengeAddress = "0x23EC7E2267F22F30a6C304b832557929E9a19b7C"
 
 export const Main = ({ accounts }) => {
 
