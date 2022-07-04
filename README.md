@@ -1,4 +1,4 @@
-v### `npm install` to install dependencies 
+### `npm install` to install dependencies 
 
 # My approach to the Smart Contract Developer Challenge
 
