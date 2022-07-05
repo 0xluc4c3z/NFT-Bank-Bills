@@ -24,9 +24,12 @@ export const Main = ({ accounts }) => {
   const inputRef = useRef();
 
   useEffect(() =>{
+    let wallet
     if(window.ethereum){
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
+      const provider = new ethers.providers.JsonRpcProvider("https://rinkeby.infura.io/v3/2a625428fa034883a0fdfbea92f2eb22");
+      wallet = accounts[0]
+      console.log(wallet);
+      const signer = provider.getSigner(wallet);
       const contract = new ethers.Contract(
         ChallengeAddress,
         ChallengeABI.abi,
@@ -35,7 +38,8 @@ export const Main = ({ accounts }) => {
       setContract(contract)
       handleStock()
     }
-  }, [accounts])
+    handleStock()
+  }, [isConnected])
 
 
   const handleConvert = async () =>{
