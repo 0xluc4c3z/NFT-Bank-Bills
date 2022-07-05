@@ -35,14 +35,14 @@ export const Main = ({ accounts }) => {
         ChallengeABI.abi,
         signer
       )
-      setContract(contract)
+      setContract(contract)  
       handleStock()
     }
-    handleStock()
   }, [isConnected])
 
 
   const handleConvert = async () =>{
+    handleStock()
     let input = inputRef.current.value
     let value = await contract.ConvertDenom(Number(input))
 
