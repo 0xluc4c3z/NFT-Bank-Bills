@@ -26,7 +26,7 @@ export const Main = ({ accounts }) => {
   useEffect(() =>{
     let wallet
     if(window.ethereum){
-      const provider = new ethers.providers.JsonRpcProvider("https://rinkeby.infura.io/v3/2a625428fa034883a0fdfbea92f2eb22");
+      const provider = new ethers.providers.JsonRpcProvider(`https://rinkeby.infura.io/v3/${import.meta.env.VITE_APP_INFURA_PROJECT_ID}`);
       wallet = accounts[0]
       console.log(wallet);
       const signer = provider.getSigner(wallet);
