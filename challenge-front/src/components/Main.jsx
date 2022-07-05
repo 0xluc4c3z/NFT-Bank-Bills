@@ -100,6 +100,13 @@ export const Main = ({ accounts }) => {
 
 
   const handleMint = async () =>{
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    const signer = provider.getSigner();
+    const contract = new ethers.Contract(
+      ChallengeAddress,
+      ChallengeABI.abi,
+      signer
+    )
     let input = inputRef.current.value
     await contract.Mint(Number(input))
   }
