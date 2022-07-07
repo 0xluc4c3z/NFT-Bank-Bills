@@ -42,10 +42,11 @@ export const Main = ({ accounts }) => {
 
 
   const handleConvert = async () =>{
+    if (isConnected === false) return alert('YOU NEED TO CONNECT')
     handleStock()
     let input = inputRef.current.value
+    if (Number(input) === 0 || Number(input) === null || Number(input) === undefined) return alert('ENTER A VALID NUMBER FOR CONVERT')
     let value = await contract.ConvertDenom(Number(input))
-
     let arr = convert(value)
 
     setValue(arr)
@@ -100,6 +101,7 @@ export const Main = ({ accounts }) => {
 
 
   const handleMint = async () =>{
+    if (isConnected === false) return alert('YOU NEED TO CONNECT')
     const provider = new ethers.providers.Web3Provider(window.ethereum)
     const signer = provider.getSigner();
     const contract = new ethers.Contract(
@@ -108,6 +110,7 @@ export const Main = ({ accounts }) => {
       signer
     )
     let input = inputRef.current.value
+    if (Number(input) === 0 || Number(input) === null || Number(input) === undefined) return alert('ENTER A VALID NUMBER FOR MINT')
     await contract.Mint(Number(input))
   }
 
