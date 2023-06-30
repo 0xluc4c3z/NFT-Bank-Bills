@@ -1,11 +1,8 @@
-import React, { useEffect, useState, useRef } from 'react'
-import './Main.css'
+import React, { useEffect, useState, useRef } from 'react';
+import './Main.css';
 import { ethers } from "ethers";
-import ChallengeABI from '../web3/ChallengeABI.json'
+import ChallengeABI from '../web3/ChallengeABI.json';
 import { Admin } from './Admin';
-import dotenv from dotenv
-
-dotenv.config()
 
 const ChallengeAddress = "0xdEfe5DBFe45a3C2e8878C211b404CDf2AC25B256"
 
@@ -29,7 +26,7 @@ export const Main = ({ accounts }) => {
   useEffect(() =>{
     let wallet
     if(window.ethereum){
-      const provider = new ethers.providers.JsonRpcProvider(process.env.GOERLI_URL);
+      const provider = new ethers.providers.JsonRpcProvider("https://eth-goerli.g.alchemy.com/v2/Lnd36YL2Kb6uFv-Twl2_o4PrPRQMqDg4");
       wallet = accounts[0]
       console.log(wallet);
       const signer = provider.getSigner(wallet);
