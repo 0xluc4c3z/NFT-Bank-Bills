@@ -1,10 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
-require('dotenv').config()
+require("dotenv").config();
 require("hardhat-gas-reporter");
 require("@nomiclabs/hardhat-etherscan");
-
-const projectId = process.env.INFURA_PROJECT_ID
-const privateKey = process.env.DEPLOYER_SIGNER_PRIVATE_KEY
 
 module.exports = {
   solidity: {
@@ -12,20 +9,22 @@ module.exports = {
     settings: {
       optimizer: {
         enabled: true,
-        runs: 10000
+        runs: 200
       },
     },
   },
   networks: {
-    rinkeby: {
-      url: `https://rinkeby.infura.io/v3/${projectId}`,
-      accounts: [privateKey],
+    hardhat: {},
+    goerli: {
+      url: process.env.GOERLI_URL || "",
+      accounts: {
+        mnemonic: process.env.MNEMONIC,
+      },
     },
   },
   gasReporter: {
-    enabled: (process.env.REPORT_GAS) ? true : false,
-    currency: 'DAI',
-    coinmarketcap: process.env.COINMARKETCAP_API_KEY
+    enabled: true,
+    currency: 'USD',
   },
   etherscan: {
     apiKey: process.env.ETHERSCAN_KEY,

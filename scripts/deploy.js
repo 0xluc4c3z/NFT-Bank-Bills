@@ -2,7 +2,7 @@ const hre = require("hardhat");
 
 async function main() {
 
-  const Challenge = await hre.ethers.getContractFactory("Challenge");
+  const Challenge = await ethers.getContractFactory("Challenge");
   const challenge = await Challenge.deploy();
 
   await challenge.deployed();
