@@ -3,6 +3,9 @@ import './Main.css';
 import { ethers } from "ethers";
 import ChallengeABI from '../web3/ChallengeABI.json';
 import { Admin } from './Admin';
+// import * as dotenv from "dotenv";
+
+// dotenv.config();
 
 const ChallengeAddress = "0xdEfe5DBFe45a3C2e8878C211b404CDf2AC25B256"
 
