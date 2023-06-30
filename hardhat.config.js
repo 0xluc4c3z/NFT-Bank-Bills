@@ -17,9 +17,7 @@ module.exports = {
     hardhat: {},
     goerli: {
       url: process.env.GOERLI_URL || "",
-      accounts: {
-        mnemonic: process.env.MNEMONIC,
-      },
+      accounts: [process.env.PRIVATE_KEY],
     },
   },
   gasReporter: {
@@ -27,6 +25,8 @@ module.exports = {
     currency: 'USD',
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_KEY,
+    apiKey: {
+      goerli: process.env.ETHERSCAN_API_KEY,
+    },
   },
 };

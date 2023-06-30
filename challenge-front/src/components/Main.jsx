@@ -3,8 +3,11 @@ import './Main.css'
 import { ethers } from "ethers";
 import ChallengeABI from '../web3/ChallengeABI.json'
 import { Admin } from './Admin';
+import dotenv from dotenv
 
-const ChallengeAddress = "0x23EC7E2267F22F30a6C304b832557929E9a19b7C"
+dotenv.config()
+
+const ChallengeAddress = "0xdEfe5DBFe45a3C2e8878C211b404CDf2AC25B256"
 
 export const Main = ({ accounts }) => {
 
@@ -19,14 +22,14 @@ export const Main = ({ accounts }) => {
   const[peso50, setPeso50] = useState()
   const[peso100, setPeso100] = useState()
 
-  const isAdmin = Boolean(accounts[0] === ("0x20327E71a92AadA0d2327Cd455d748b5E11bea5c").toLowerCase())
+  const isAdmin = Boolean(accounts[0] === ("0x31b8828625cAAB7548b563f256eC297313C28a00").toLowerCase())
 
   const inputRef = useRef();
 
   useEffect(() =>{
     let wallet
     if(window.ethereum){
-      const provider = new ethers.providers.JsonRpcProvider(`https://rinkeby.infura.io/v3/2a625428fa034883a0fdfbea92f2eb22`);
+      const provider = new ethers.providers.JsonRpcProvider(process.env.GOERLI_URL);
       wallet = accounts[0]
       console.log(wallet);
       const signer = provider.getSigner(wallet);
