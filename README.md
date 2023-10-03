@@ -1,4 +1,9 @@
 # NFT Bank Bills
+
+Page: https://smart-contract-developer-challenge.vercel.app/
+
+Contract: https://goerli.etherscan.io/address/0xdefe5dbfe45a3c2e8878c211b404cdf2ac25b256#code
+
 NFTs representing coins and banknotes of different denominations. 
 
 - 1 peso
